@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".QuizResultActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/question_bg"
+            android:divider="@drawable/divider_16dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:showDividers="middle"
+            android:weightSum="8"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp">
+
+            <TextView
+                android:id="@+id/quizResultTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/courbd"
+                android:gravity="center"
+                android:padding="16dp"
+                android:singleLine="true"
+                android:text="@string/quizResultText"
+                android:textSize="48sp" />
+
+            <Button
+                android:id="@+id/quizResultCloseButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Go to home" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

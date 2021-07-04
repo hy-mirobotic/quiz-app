@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Kahoot</string>
+    <string name="edit_message">Topics</string>
+
+    <string name="quizQuestionAnswerIncorrectFeedback">Opps! </string>
+    <string name="question_choice_a"> </string>
+    <string name="question_choice_b"> </string>
+    <string name="question_choice_c"> </string>
+    <string name="question_choice_d"> </string>
+    <string name="question_choice_ans"> </string>
+    <string name="question_feedback"> </string>
+
+    <string name="quiz_index">00/00</string>
+    <string name="quiz_countdown">00</string>
+    <string name="quiz_name"> </string>
+    <string name="quizID"> </string>
+    <string name="waitDialogText">"Waiting for quiz to progress... "</string>
+    <string name="loginFailedErrorMessage">Login Error</string>
+    <string name="loginNotFilledErrorMessage">"One or more of the fields are not filled. "</string>
+    <string name="loginPreQuizInfoMessage">"Waiting for quiz to start... "</string>
+    <string name="loginPostQuizMessage">"Quiz has ended. "</string>
+    <string name="questionChoiceSelectedWaitDialog">"Waiting for quiz to progress... "</string>
+    <string name="questionChoiceSelectedText"> </string>
+    <string name="quizQuestionAnswerCorrectFeedback">"Yay! You are correct. "</string>
+    <string name="closeQuizMessage">Double click to close this quiz! </string>
+    <string name="questionText"> </string>
+    <string name="quizLogoContentDescription">Quiz Logo</string>
+    <string name="questionImageContentDescription">Question Image</string>
+    <string name="quizResultCloseButtonText">Return to Home</string>
+    <string name="quizResultText">00/00</string>
+    <string name="quizQuestionAnswerNullSubmittedIndexFeedback">No answer submitted. =/</string>
+</resources>

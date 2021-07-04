@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/quizQuestionChoiceAndAnswerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/question_bg"
+            android:divider="@drawable/divider_16dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:weightSum="2"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="32dp"
+            tools:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp">
+
+                    <TextView
+                        android:id="@+id/quizQuestionChoiceAndAnswerQuestionNumberTextView"
+                        android:layout_width="64dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/cour"
+                        android:gravity="center"
+                        android:maxLength="5"
+                        android:padding="8dp"
+                        android:text="@string/quiz_index"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <HorizontalScrollView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true"
+                        app:layout_constraintEnd_toStartOf="@+id/quizQuestionChoiceAndAnswerLayoutQuestionQuestionCountdownTextView"
+                        app:layout_constraintStart_toEndOf="@+id/quizQuestionChoiceAndAnswerQuestionNumberTextView"
+                        tools:layout_editor_absoluteY="64dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:divider="@drawable/divider_8dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:showDividers="middle">
+
+                            <ImageView
+                                android:id="@+id/quizQuestionChoiceAndAnswerLogoImageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:contentDescription="@string/quizLogoContentDescription"
+                                android:padding="8sp"
+                                android:scaleType="centerInside"
+                                app:srcCompat="@android:drawable/btn_star_big_on" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:padding="8dp"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:id="@+id/quizQuestionChoiceAndAnswerQuizNameTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/cour"
+                                    android:gravity="start|center_vertical"
+                                    android:text="@string/quiz_name"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/quizQuestionChoiceAndAnswerQuizIDTextView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/cour"
+                                    android:gravity="start|center_vertical"
+                                    android:text="@string/quizID"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:id="@+id/quizQuestionChoiceAndAnswerLayoutQuestionQuestionCountdownTextView"
+                        android:layout_width="64dp"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/cour"
+                        android:gravity="center"
+                        android:maxLength="5"
+                        android:padding="8dp"
+                        android:text="@string/quiz_countdown"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@drawable/divider_8dp"
+                        android:orientation="vertical"
+                        android:padding="16sp"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:id="@+id/quizQuestionChoiceAndAnswerQuestionTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/courbd"
+                            android:gravity="start|top"
+                            android:text="@string/questionText"
+                            android:textSize="24sp" />
+
+                        <ImageView
+                            android:id="@+id/quizQuestionChoiceAndAnswerImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/questionImageContentDescription"
+                            android:scaleType="fitStart"
+                            android:visibility="gone"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <VideoView
+                            android:id="@+id/quizQuestionChoiceAndAnswerVideoView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/quizQuestionChoicesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:divider="@drawable/divider_16dp"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    android:weightSum="4">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:animateLayoutChanges="true">
+
+                        <include
+                            android:id="@+id/quizQuestionChoiceA"
+                            layout="@layout/question_choice_button"
+                            app:questionButtonBackground="@{@drawable/question_choice_a_bg}"
+                            app:questionChoiceText="@{@string/question_choice_a}" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:animateLayoutChanges="true">
+
+                        <include
+                            android:id="@+id/quizQuestionChoiceB"
+                            layout="@layout/question_choice_button"
+                            app:questionButtonBackground="@{@drawable/question_choice_b_bg}"
+                            app:questionChoiceText="@{@string/question_choice_b}" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:animateLayoutChanges="true">
+
+                        <include
+                            android:id="@+id/quizQuestionChoiceC"
+                            layout="@layout/question_choice_button"
+                            app:questionButtonBackground="@{@drawable/question_choice_c_bg}"
+                            app:questionChoiceText="@{@string/question_choice_c}" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:animateLayoutChanges="true">
+
+                        <include
+                            android:id="@+id/quizQuestionChoiceD"
+                            layout="@layout/question_choice_button"
+                            app:questionButtonBackground="@{@drawable/question_choice_d_bg}"
+                            app:questionChoiceText="@{@string/question_choice_d}" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/quizQuestionAnswerFeedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_weight="2"
+                        android:fontFamily="@font/courbd"
+                        android:gravity="center"
+                        android:padding="16dp"
+                        android:text="@string/question_feedback"
+                        android:textSize="48sp"
+                        android:visibility="gone" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:visibility="gone">
+
+                        <include
+                            android:id="@+id/quizQuestionAnswerCorrect"
+                            layout="@layout/question_choice_button"
+                            app:choiceClickable="@{false}"
+                            app:questionButtonBackground="@{@drawable/button_transparent_bg}"
+                            app:questionChoiceText="@{@string/questionChoiceSelectedText}" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/quizCloseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/question_bg"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="32dp">
+
+            <FrameLayout
+                android:id="@+id/quizCloseButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/quizCloseTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/courbd"
+                    android:gravity="center"
+                    android:text="@string/closeQuizMessage"
+                    android:textSize="24sp" />
+            </FrameLayout>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
